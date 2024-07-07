@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MauiImageClassification.ViewModels"
+             x:DataType="viewmodels:MainPageViewModel"
+             Shell.NavBarIsVisible="False"
+             x:Class="MauiImageClassification.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="1,1">
+            <GradientStopCollection>
+                <GradientStop Offset="0.3" Color="#e4e796"/>
+                <GradientStop Offset="0.6" Color="#b3cca9"/>
+                <GradientStop Offset="1" Color="#50ac5d"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center">
+            <Label Text="Classification Result:"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="ClassificationResultLabel"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Text="{Binding ClassificationResult}"/>
+
+            <VerticalStackLayout Margin="20, 30, 20, 10">
+                <Button x:Name="CameraButton"
+                        Text="Capture photo"
+                        CornerRadius="50"
+                        MaximumHeightRequest="50"
+                        Command="{Binding ClassifyCapturedImageCommand}"/>
+                <Button x:Name="GalleryButton"
+                        Text="Select from gallery"
+                        CornerRadius="50"
+                        MaximumHeightRequest="50"
+                        Margin="0,10,0,0"
+                        Command="{Binding ClassifiyGalleryImageCommand}"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,5 @@
+﻿.NET MAUI Course - https://www.youtube.com/watch?v=DuNLR_NJv8U
+Short tutorials on various functionalities https://www.youtube.com/@DavidOrtinau
+Xamarin & MAUI tutorials - https://www.youtube.com/@jfversluis
+Charts in MAUI - https://www.youtube.com/watch?v=yMG8oPIuMig
+Gallery of good looking applications created with Xamarin - https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
